@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.hidden{
+    display: none;
+}
+
+.layout{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+}
+.sidebar{
+    width: 15%;
+    height: 100%;
+    padding: 20px;
+    background-color: #cbecec;
+    border-radius: 0 20px 20px 0;
+}
+.sidebar-list{
+
+}
+.sidebar-item{
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    list-style-type: none;
+    font-size: 24px;
+    color: #6c6c6c;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.sidebar-item:hover{
+    color: #484848;
+}
+.sidebar-icon{
+    margin-right: 10px;
+}
+
+.sidebar-list .active{
+    border-bottom: 1px solid #b4b4b4;
+}
+
+
+
+.page{
+    padding-top: 20px;
+    width: 85%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.news{
+    height: 100vh;
+}
+.news-wrapper{
+    width: 40%;
+    margin: 0 auto;
+}
+.news-item{
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #cbecec;
+    border-radius: 8px;
+    color: #5e5e5e;
+}
+.news-item-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.community-img{
+    border-radius: 50%;
+    cursor: pointer;
+}
+.network-name{
+    margin-left: 10px;
+    font-weight: 500;
+    color: #28a6a2;
+    font-size: 18px;
+    cursor: pointer;
+}
+.news-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+    white-space: pre-wrap;
+}
+.news-content{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.community-content-img{
+    width: 100%;
+}
+
+.repost-icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.repost-icon:hover{
+    color: #28a6a2;
+}
+.repost-icon.active{
+    color: #28a6a2;
+}
+
+
+
+
+
+
+.user-profile{
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+}
+.user-wrapper{
+    width: 40%;
+}
+.user-photo-wrapper{
+    margin-bottom: 80px;
+    width: 500px;
+}
+.user-photo{
+    width: 100%;
+    border-radius: 10px;
+}
+.community{
+    width: 500px;
+    border: 1px solid #b7b7b7;
+    border-radius: 8px;
+}
+.community-title{
+    padding: 10px;
+    color: #919191;
+    font-weight: 500;
+    font-size: 20px;
+}
+.community-wrapper{
+    display: flex;
+    align-items: center;
+}
+.community-item:not(:last-child){
+    margin-right: 5px;
+}
+.community-item{
+    padding: 10px;
+}
+.profile-community-img{
+    width: 100px;
+    border-radius: 8px;
+}
+.community-item-title{
+    color: #5e5e5e;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+.user-info{
+    width: 50%;
+}
+.user-name-wrapper{
+
+}
+.user-name{
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-status{
+    color: #5e5e5e;
+    font-size: 20px;
+}
+
+.user-menu{
+    margin-top: 25px;
+    display: flex;
+    border-bottom: 1px solid #e3e3e3;
+}
+.user-menu-item{
+    color: #b7b7b7;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+}
+.user-menu-item:hover{
+    color: #2da39f;
+    border-bottom: 2px solid #2da39f;
+}
+.user-menu-item.active{
+    color: #2da39f;
+    border-bottom: 2px solid #2da39f;
+}
+.user-menu-item:not(:last-child){
+    margin-right: 30px;
+}
+
+
+.user-info-wrapper{
+    margin-top: 30px;
+}
+.user-info-desc{
+    color: #757575;
+    font-size: 20px;
+}
+
+.user-info-params{
+    margin-top: 40px;
+}
+.user-info-title{
+    margin-bottom: 15px;
+    color: #b7b7b7;
+    font-size: 24px;
+    font-weight: 500;
+}
+.user-info-title:not(:first-child){
+    margin-top: 30px;
+}
+.user-info-row{
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+}
+.user-info-item{
+    font-size: 18px;
+}
+.info-item-title{
+    color: #000;
+    margin-bottom: 5px;
+}
+.info-item-value{
+    color: #757575;
+    font-weight: 500;
+}
+.emptyWall{
+    font-weight: 500;
+    text-align: center;
+    font-size: 28px;
+    color: #b7b7b7;
+}
+.emptyWall p{
+    margin-bottom: 10px;
+}
+.empty-link{
+    text-decoration: none;
+    color: #2da39f;
+}
+
+
+
+
+
+
+.user-wall-wrapper{
+    margin-top: 40px;
+}
+.wall-item{
+    position: relative;
+    margin-bottom: 30px;
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #cbecec;
+    border-radius: 8px;
+    color: #5e5e5e;
+}
+.delete-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #8f8f8f;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.delete-btn:hover{
+    color: #29a5a2;
+}
+
+
+
+
+.authorization{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+input:focus{
+    outline: none;
+}
+.authorization-layout{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+}
+.authorization-wrapper{
+    position: fixed;
+    z-index: 2;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+    height: 500px;
+    background: url("./img/auth-background.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+.authorization-title{
+    font-size: 38px;
+    font-weight: 500;
+    padding: 35px;
+    color: #587777;
+}
+.authorization-form{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.form-input{
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid #899b9b;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: #5e5e5e;
+}
+.form-btn{
+    margin-top: 10px;
+    margin-left: auto;
+    width: 30%;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #587777;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.form-btn:hover{
+    background-color: #fff;
+    color: #587777;
+}
+.authorization-close-icon{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 5px;
+    font-size: 30px;
+    color: #495d5d;
+    cursor: pointer;
+}
+.authorization-error{
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #587777;
+    text-align: right;
+}
+.user-exist{
+    width: 500px;
+    margin: auto auto;
+    margin-top: 200px;
+    font-size: 40px;
+    color: #587777;
+}

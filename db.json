@@ -1,0 +1,32 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "text": "Друг: — Что ты делал на выходных?<br/>Я: — О, я кодил.<br/>Друг: — Ну а кроме этого? Ты же не весь день кодил.<br/>Я: ",
+      "img": "news1.jpg",
+      "community_img": "network-img.jpg",
+      "community_title": "/dev/null"
+    },
+    {
+      "id": 2,
+      "text": null,
+      "img": "news2.png",
+      "community_img": "network-img.jpg",
+      "community_title": "/dev/null"
+    },
+    {
+      "id": 3,
+      "text": "Я: *Меняю HDMI 1 на HDMI 2*<br/>Моя бабушка:",
+      "img": "news3.jpg",
+      "community_img": "network-img.jpg",
+      "community_title": "/dev/null"
+    },
+    {
+      "id": 4,
+      "text": null,
+      "img": "news4.jpg",
+      "community_img": "network-img.jpg",
+      "community_title": "/dev/null"
+    }
+  ]
+}

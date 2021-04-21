@@ -1,32 +1,100 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Main></Main>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import Main from "./views/Main";
+export default {
+  components: {Main},
+  mounted() {
+    let user = {
+      isAuth: false,
+      login: 'Yan',
+      password: '12345',
+      name: 'Ян',
+      lastname: 'Невзоров',
+      status: 'Ваше время ограничено, не тратьте его, живя чужой жизнью',
+      info: [
+        {
+          title: 'Общая информация',
+          params: [
+            {
+              title: 'Родной город',
+              value: 'Москва'
+            },
+            {
+              title: 'День рождения',
+              value: '27 апреля'
+            },
+            {
+              title: 'Языки',
+              value: 'Русский, английский'
+            },
+          ]
+        },
+        {
+          title: 'Хобби',
+          params: [
+            {
+              title: 'Любимый фильм',
+              value: 'Бойцовский клуб'
+            },
+            {
+              title: 'Любимая еда',
+              value: 'Пицца'
+            },
+            {
+              title: 'Любимый писатель',
+              value: 'Ф. М. Достоевский'
+            },
+          ]
+        },
+        {
+          title: 'Контактная информация',
+          params: [
+            {
+              title: 'Телефон',
+              value: '8 (977) - 843 - 90 - 70'
+            },
+            {
+              title: 'Email',
+              value: 'nevzor.yan@gmail.com'
+            },
+          ]
+        }
+      ],
+      community: [
+        {
+          title: '/dev/null',
+          img: 'network-img.jpg'
+        },
+        {
+          title: 'КудаGo',
+          img: 'network-img.jpg'
+        },
+        {
+          title: 'Афиша',
+          img: 'network-img.jpg'
+        },
+        {
+          title: 'OZON',
+          img: 'network-img.jpg'
+        }
+      ],
+      repostNews: []
     }
+
+    if (!localStorage.getItem('user')) {
+      const parsed = JSON.stringify(user);
+      localStorage.setItem('user', parsed);
+    }
+
+    this.$store.dispatch('getUser')
   }
 }
+</script>
+<style lang="scss">
+@import "assets/style.css";
 </style>
